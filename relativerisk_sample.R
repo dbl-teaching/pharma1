@@ -1,4 +1,10 @@
+# relative risk ####
+
 library(epitools)
+
+tab <- matrix(c(1,4,9,6),byrow = TRUE, ncol = 2)
+epitab(tab, method= "riskratio")
+
 
 ## small sample ####
 
@@ -16,9 +22,7 @@ tab <- matrix(c(600,400,900,100),byrow = TRUE, ncol = 2)
 rr_large <- epitab(tab, method= "riskratio")
 
 
-rr_small$tab[2,5]
-rr_small$tab[2,6]
-rr_small$tab[2,7]
+# visualization ####
 
 rr <- data.frame(
   a = c("small","medium","large"),
